@@ -2,7 +2,9 @@ from dataclasses import dataclass
 from typing import NamedTuple
 
 
-ParsedContent = NamedTuple('ParsedContent', [('title', str), ('body', str)])
+class ParsedContent(NamedTuple):
+    title: str
+    body: str
 
 
 @dataclass
