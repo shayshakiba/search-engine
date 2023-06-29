@@ -9,6 +9,6 @@ class ParsedContent(NamedTuple):
 
 @dataclass
 class Page:
-    page_id: int
+    id: int
     url: str
     parsed_content: ParsedContent
