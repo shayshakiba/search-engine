@@ -1,2 +1,7 @@
+from searchengine import cli, indexer
+
+
 def run():
-    pass
+    indexer.index_pages()
+
+    cli.handle_user()
