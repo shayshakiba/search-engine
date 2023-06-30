@@ -1,4 +1,4 @@
-from searchengine.page import Page, ParsedContent
+from searchengine.page import Page
 
 
 _pages: list[Page] = []
