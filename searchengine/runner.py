@@ -1,7 +1,8 @@
-from searchengine import cli, indexer
+from searchengine import gui, indexer
 
 
 def run():
     indexer.index_pages()
 
-    cli.handle_user()
+    app = gui.App()
+    app.mainloop()
