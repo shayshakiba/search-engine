@@ -14,3 +14,7 @@ def get(page_id: int) -> Page | None:
             return page
 
     return None
+
+
+def get_pages(page_ids: list[int]) -> list[Page]:
+    return [get(page_id) for page_id in page_ids]

@@ -11,14 +11,14 @@ PAGE_REPOSITORY_FILE_PATH = 'data/page_repository.xml'
 def index_pages() -> None:
     xml_root = et.parse(PAGE_REPOSITORY_FILE_PATH).getroot()
     for page_element in xml_root.iterfind('page'):
-        page = load_page(page_element)
+        page = _load_page(page_element)
 
         pages.add(page)
 
         indexes.index_page(page)
 
 
-def load_page(page_element: et.Element) -> Page:
+def _load_page(page_element: et.Element) -> Page:
     id = int(page_element.attrib['id'])
 
     url = bytes.fromhex(page_element[0].text).decode()
